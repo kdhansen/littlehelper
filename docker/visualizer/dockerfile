@@ -29,7 +29,11 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get update && apt-get install -y \
         ros-${ROS_DISTRO}-rviz2 \
         ros-${ROS_DISTRO}-rqt \
-        ros-${ROS_DISTRO}-rqt_common-plugins && \
+        ros-${ROS_DISTRO}-rqt-common-plugins
+
+# install packages for visualizing our robot(s)
+RUN apt-get update && apt-get install -y \
+        ros-${ROS_DISTRO}-ur-description && \
         rm -rf /var/lib/apt/lists/*
         # Remember this last line to clean up the image a little bit.
 
