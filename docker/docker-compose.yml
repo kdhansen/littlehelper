@@ -1,0 +1,9 @@
+services:
+  ros2ur:
+    build: ./ros2ur
+  ursim:
+    build: ./ursim
+  visualizer:
+    build: ./visualizer
+    ports:
+      - "80:80"
