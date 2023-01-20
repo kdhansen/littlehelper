@@ -1,8 +1,10 @@
 services:
-  ros2ur:
-    build: ./ros2ur
+  # ros2ur:
+  #   build: ./ros2ur
   ursim:
     build: ./ursim
+  skiros:
+    build: ./skiros
   visualizer:
     build: ./visualizer
     ports:
